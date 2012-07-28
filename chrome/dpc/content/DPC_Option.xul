@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://dpc/content/skin/DPC_Style.css" type="text/css"?>
+<dialog id="donothing" title="Dialog example"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   buttons="accept,cancel"
+   buttonlabelcancel="Cancel"
+   buttonlabelaccept="Save"
+   ondialogaccept="return DPC_Preference.DPC_Close();"
+   ondialogcancel="return;"
+   onload="DPC_Preference.DPC_GUI_Init();">
+    
+	<script type = "application/x-javascript" src = "DPC_Option.js"/>  
+	<script type = "application/x-javascript" src = "DPC_Overlay.js"/>
+	
+	<stringbundleset id="stringbundleset"> 
+		<stringbundle id="ogc-bundle" src="chrome://ogc/locale/ogc.properties"/>
+	</stringbundleset>	
+		
+	<tabbox flex="1">
+		<tabs>
+			<tab class="ogc-title" label="Preferences" />
+			<tab class="ogc-title" label="About" />
+		</tabs>
+
+
+		<tabpanels flex="1">
+			<tabpanel flex="1">
+				<vbox flex="1">
+				
+				
+					<groupbox id="repetition">
+                        <caption class="ogc-title" label="DPC score plugin preferences." dir="reverse"  />
+						<grid>
+								<columns>
+									<column/>
+									<column/>
+									<column flex = "1"/>
+								</columns>
+							<rows>		
+								<row>							
+									<hbox>
+										<checkbox id="checkboxAllowUpdateMode" label="Enable automatic update" oncommand="DPC_Preference.DPC_CheckboxAllowUpdate()" />
+									</hbox>
+								</row>
+								<row>
+									<hbox>
+										<label id="modeChangeDelayCaption" value="Update delay : "/>	
+									</hbox>
+									<!--hbox>
+										<textbox id="DPCUpdateMinutes" width="40px" value="" type="number" min="0" max="60" onchange = "OGC_Preference.OGC_TrailSampleDisplayUpdate();"/>
+									</hbox>
+									<hbox>
+										<label id="modeChangeDelayCaption" value=" minutes "/>	
+									</hbox-->
+									<hbox>
+										<textbox id="DPCUpdateSeconds" width="40px" value="" type="number" min="30" max="3600" flex="1"/>
+									</hbox>
+									<hbox>
+										<label id="modeChangeDelayCaption" value=" seconds."/>	
+									</hbox>
+								</row>
+							</rows>
+						</grid>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+		
+			<tabpanel flex="1">
+				<vbox flex="1">							
+				<!-- About section -->
+					<groupbox>
+						<caption class="dpc-title" label="About Firefox scores plugin." />
+						<description value = "Welcome to the first favware. Pay me by faving one of my picture :D"	/>
+						<description value = "If you don't want to give me a fav, you can consider this plugin as a commentware."	/>
+						<description value = "Author : Julien Pellet (aka keyz)."	/>
+						<description class="dpc-url" value="http://keyz.dpchallenge.com/" onclick="DPC_AuthorHomePage()" />
+						
+					</groupbox>
+				</vbox>
+			</tabpanel>       
+		</tabpanels>
+	</tabbox>
+</dialog>

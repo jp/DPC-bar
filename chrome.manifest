@@ -1,0 +1,9 @@
+overlay chrome://browser/content/browser.xul chrome://dpc/content/DPC_Overlay.xul
+
+# for FF3, local files security access,
+content dpc jar:chrome/dpc.jar!/content/ xpcnativewrappers=yes contentaccessible=yes
+
+# for FF2
+content dpc jar:chrome/dpc.jar!/content/ xpcnativewrappers=yes
+
+skin dpc classic/1.0 data\

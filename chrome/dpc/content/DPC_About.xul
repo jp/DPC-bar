@@ -1,0 +1,21 @@
+<?xml-stylesheet href="chrome://dpc/content/skin/DPC_Style.css" type="text/css"?>
+
+<dialog buttons="accept"
+        id="dpc-about-dialog"
+        title="&dpc.about.title;" 
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript" src="chrome://dpc/content/dpc_Util.js"/>
+
+    <vbox id="dpc-about-details">
+		<description class="dpc-name" value = "&dpc.about.productname; &dpc.about.productversion;"/>
+        
+        <description class="dpc-title" value = "&dpc.about.build.dateLabel;" />
+        <description class="dpc-date" value = "&dpc.about.build.date;" />
+        		
+		<description class="dpc-title" value="&dpc.about.organisation;" />
+		<description value = "&dpc.about.provider;"	/>		
+		<!--description class="dpc-url" value="&dpc.sidebar.webSite;" onclick="dpc_OpenURL('&dpc.about.homepage;', true)" /-->
+    </vbox>
+    <separator class="groove"/>
+</dialog>

@@ -1,0 +1,62 @@
+
+@import url("chrome://global/skin/");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/********************************************************************/
+/* 				Status bar style section							*/
+/********************************************************************/
+
+.dpc-enabled-icon {
+    list-style-image: url("chrome://dpc/content/skin/DPC_Icon16x16.png");
+}
+
+.dpc-disabled-icon {
+    list-style-image: url("chrome://dpc/content/skin/DPC_Icon16x16.png");
+}
+
+.dpc-score-up {
+    list-style-image: url("chrome://dpc/content/skin/DPC_ScoreUp16x16.png");
+}
+
+.dpc-score-down {
+    list-style-image: url("chrome://dpc/content/skin/DPC_ScoreDown16x16.png");
+}
+
+#dpc-status-bar {
+    cursor: pointer;
+}
+
+
+.dpc-statusbar-texte-style 
+{
+	cursor: pointer;
+    font-size : 14px !important; 
+	background-color:transparent;
+    padding-right: 0.30em !important;
+}
+
+.dpc-status-context-menu-texte-style  
+{
+    font-size : 12px !important; 
+    color: #000000 !important;
+    padding-right: 0.30em !important;
+}
+
+
+
+description
+{
+    margin-left: 0 !important;
+}
+
+
+.dpc-url
+{
+    color: #0000ff !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+.dpc-url:hover
+{
+    color: #ff0000 !important;
+}

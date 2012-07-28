@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+
+-->
+
+<!DOCTYPE overlay SYSTEM "chrome://dpc/locale/OGC_UserInterface.dtd">
+<?xml-stylesheet href="chrome://dpc/content/skin/DPC_Style.css" type="text/css"?>
+<overlay 
+		id = "DPC"
+		xmlns:html = "http://www.w3.org/1999/xhtml"
+		xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		orient = "vertical" >
+	
+		<!-- script section -->
+		<script type = "application/x-javascript" src = "DPC_Overlay.js"/> 
+		<script type = "application/x-javascript" src = "DPC_Option.js"/> 
+
+		
+		<stringbundleset id="stringbundleset"> 
+			<stringbundle id="ogc-bundle" src="chrome://ogc/locale/ogc.properties"/>
+		</stringbundleset>		
+		
+    <statusbar id="status-bar">
+        
+		<statusbarpanel id="dpc-status-bar" context="dpc-status-menu">
+			<caption id="dpc-status" class="dpc-statusbar-texte-style" onmousedown="DPC_Overlay.MouseClick(event);" context="dpc-status-menu" tooltiptext="No data ..."/>
+			<image id="dpc-status-icon" class="dpc-enabled-icon" onmousedown="DPC_Overlay.MouseClick(event);" context="dpc-status-menu" tooltiptext="Click to update"/>	   	              
+		</statusbarpanel>
+        
+  		
+		<menupopup id="dpc-status-menu">
+			    <menuitem class="dpc-status-context-menu-texte-style" label="Update" oncommand="DPC_Overlay.StatusBarUpdate();"/>
+			    <menuitem class="dpc-status-context-menu-texte-style" label="Preferences" oncommand="DPC_OpenPrefsDialog();"/>
+			    <menuitem class="dpc-status-context-menu-texte-style" label="Login" oncommand="DPC_Login();"/>
+
+
+        </menupopup>
+
+	</statusbar>
+	
+
+	</overlay>
