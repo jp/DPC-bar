@@ -1,4 +1,4 @@
-cd "/home/keyz/Desktop/DPC Plugin/chrome/dpc"
+cd "chrome/dpc"
 rm ../dpc.jar
 zip -r ../dpc.jar content/ locale/
 cd ../..
